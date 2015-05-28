@@ -1,10 +1,15 @@
-#from django.shortcuts import render
+from django.shortcuts import render
+from django.http import HttpResponse
+
 from rest_framework import authentication, permissions, viewsets, filters
 
 from .models import Sprint, Task
+from .filters import TaskFilter
 from .serializers import SprintSerializer, TaskSerializer, UserSerializer
 
 from django.contrib.auth import get_user_model
+
+import json
 
 User = get_user_model()
 
@@ -50,6 +55,10 @@ class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
 
 	queryset = Task.objects.all()
 	serializer_class = TaskSerializer
+	filter_class = TaskFilter
+
+	search_fields = ('name', 'description',)
+	ordering_Fields = ('name', 'order', 'started', 'due', 'completed')
 
 
 class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
@@ -60,4 +69,13 @@ class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
 	queryset = User.objects.order_by(User.USERNAME_FIELD)
 	serializer_class = UserSerializer
 
+	search_fields = (User.USERNAME_FIELD,)
 
+
+
+def index(request):
+	sprint = Sprint.objects.get(pk=1)
+	
+	tasks = sprint.task_set.all()#select_related('sprint').filter(name='task1')
+	
+	return HttpResponse(tasks)

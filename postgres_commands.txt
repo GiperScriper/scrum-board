@@ -1,0 +1,13 @@
+# start the postgres server
+$ postgres -D /usr/local/var/postgres
+
+# create your database
+$ createdb mydb
+
+# client to db
+psql mydb
+
+# start/stop
+postgres -D /usr/local/var/postgres
+pg_ctl start -D /usr/local/var/postgres
+pg_ctl stop -D /usr/local/var/postgres

@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <title>Board</title>
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootswatch/cosmo/bootstrap.min.css' %}">    
+</head>
+<body>
+    <h1>Board</h1>
+    
+    <!-- Vendors -->
+    <script src="{% static 'vendor/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'vendor/underscore/underscore.js' %}"></script>
+    <script src="{% static 'vendor/backbone/backbone.js' %}"></script>
+    <!-- /Vendors -->
+
+    <script id="config" type="text/json">
+        {
+            "models": {},
+            "collections": {},
+            "views": {},
+            "router": null 
+        }
+    </script>
+    
+    <!-- Board App -->
+    <script src="{% static 'js/board/app.js' %}"></script>
+    <script src="{% static 'js/board/models.js' %}"></script>
+    <script src="{% static 'js/board/views.js' %}"></script>
+    <script src="{% static 'js/board/router.js' %}"></script>
+    <!-- /Board App -->
+
+</body>
+</html>

@@ -20,6 +20,7 @@ parts/
 sdist/
 var/
 venv/
+static/vendor/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -55,8 +56,5 @@ coverage.xml
 docs/_build/
 
 # PyBuilder
-<<<<<<< HEAD
 target/
-=======
-target/
->>>>>>> 6b85bf904cc5fbdb4e86636d32e8028fe09c435b
+

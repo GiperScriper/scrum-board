@@ -74,8 +74,7 @@ class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
 
 
 def index(request):
-	sprint = Sprint.objects.get(pk=1)
+	sprint = Sprint.objects.get(pk=1)	
+	tasks = sprint.task_set.all()
 	
-	tasks = sprint.task_set.all()#select_related('sprint').filter(name='task1')
-	
-	return HttpResponse(tasks)
+	return render(request, 'index.html', locals())

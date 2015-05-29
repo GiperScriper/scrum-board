@@ -1,0 +1,26 @@
+{
+  "name": "scrum-board",
+  "version": "0.0.1",
+  "homepage": "https://github.com/GiperScriper/scrum-board",
+  "authors": [
+    "Nikolay Martynov <tty0sh@gmail.com>"
+  ],
+  "description": "home project",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.0",
+    "bootstrap": "~3.3.4",
+    "bootswatch": "~3.3.4+1"
+  }
+}

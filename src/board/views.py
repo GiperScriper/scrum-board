@@ -81,3 +81,6 @@ def index(request):
 
 def demo(request):
 	return render(request, 'demo/index.html', locals())
+
+def main(request):
+	return render(request, 'demo/main.html', locals())

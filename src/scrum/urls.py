@@ -18,12 +18,15 @@ from django.contrib import admin
 from rest_framework.authtoken.views import obtain_auth_token
 
 from board.urls import router
-from board.views import index, demo
+from board.views import index, demo, main
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/v1/token/', obtain_auth_token, name='api-token'),
     url(r'^api/v1/', include(router.urls)),
     url(r'^$', index, name='main'),
+    
+    # for testing
     url(r'^demo$', demo, name='demo'),
+    url(r'^main$', main, name='main'),
 ]

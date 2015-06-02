@@ -1,6 +1,6 @@
-(function ($, Backbone, _, app) {
+(function ($, Backbone, _, App) {
 
-    var IndexView = Backbone.View.extend({
+    var Index = Backbone.View.extend({
         templateName: "#index-template",
         
         initialize: function () {
@@ -18,6 +18,6 @@
         }
     });
 
-    app.views.IndexView = IndexView;
+    App.Views.Index = Index;
 
-})($, Backbone, _, app);
+})($, Backbone, _, App);

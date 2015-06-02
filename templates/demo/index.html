@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootswatch/cosmo/bootstrap.min.css' %}">
+</head>
+<body>
+	<a href="/">back</a>
+	<hr>
+	<h1>Demo Page</h1>
+
+	<div id="todo">
+    </div>
+    <script type="text/template" id="item-template">
+        <div>
+            <input id="todo_complete" type="checkbox" <%= completed ?
+            'checked="checked"' : '' %>>
+            <%= title %>
+        </div>
+    </script>
+	
+	<!-- Vendors -->
+    <script src="{% static 'vendor/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'vendor/underscore/underscore.js' %}"></script>
+    <script src="{% static 'vendor/backbone/backbone.js' %}"></script>
+    <!-- /Vendors -->
+
+    <!-- Demo app -->
+    <script src="{% static 'js/demo/demo.js' %}"></script>
+    <!-- /Demo -->
+</body>
+</html>

@@ -45,8 +45,7 @@ class Task(models.Model):
 	assigned = models.ForeignKey(User, null=True, blank=True)
 	started = models.DateField(blank=True, null=True)
 	due = models.DateField(blank=True, null=True)
-	completed = models.DateField(blank=True, null=True)
-	test_field = models.TextField(blank=True, default='')
+	completed = models.DateField(blank=True, null=True)	
 
 	def __str__(self):
 		return self.name

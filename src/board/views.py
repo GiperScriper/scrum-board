@@ -78,3 +78,6 @@ def index(request):
 	tasks = sprint.task_set.all()
 	
 	return render(request, 'index.html', locals())
+
+def demo(request):
+	return render(request, 'demo/index.html', locals())

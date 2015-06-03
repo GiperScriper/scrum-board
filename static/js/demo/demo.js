@@ -1,3 +1,8 @@
+var testApp = {
+	'Models': 'Model',
+	'Views': 'Views',
+};
+
 (function ($, Backbone, _) {
 
 var  Todo = Backbone.Model.extend({
@@ -110,7 +115,7 @@ var ItemView = Backbone.View.extend({
 
 
 
-
+//testApp.ModelTest = new Todo();
 
 
 

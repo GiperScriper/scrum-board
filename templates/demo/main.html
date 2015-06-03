@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootswatch/cosmo/bootstrap.min.css' %}">    
+</head>
+<body>
+    <h1>Main</h1>
+    <hr>    
+    
+    <!-- Vendors -->
+    <script src="{% static 'vendor/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'vendor/underscore/underscore.js' %}"></script>
+    <script src="{% static 'vendor/backbone/backbone.js' %}"></script>
+    <!-- /Vendors -->
+
+    <script id="task-template" type="text/template">
+        <%= title %>
+    </script>    
+    
+    <!-- Demo app -->
+    <script src="{% static 'js/demo/main.js' %}"></script>
+    <!-- /Demo -->    
+
+</body>
+</html>

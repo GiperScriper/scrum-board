@@ -93,7 +93,7 @@ var ListView = Backbone.View.extend({
 		_.each(items, function (item) {
 			var itemView = new ItemView({model: item});
 			this.$el.append(itemView.render().el);
-		}, this);
+		}, this); // this
 		//this.$el.html(this.model.toJSON());
 		//return this;
 	}

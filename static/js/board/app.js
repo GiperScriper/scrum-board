@@ -6,9 +6,19 @@
 
 // })($);
 
-var App = {
-	'Models': {},
-	'Views': {},
-	'Collections': {},
-	'Router': null
-};
+var App = (function ($){
+
+    var app = {
+        'Models': {},
+        'Views': {},
+        'Collections': {},
+        'Router': null
+    };
+
+    $(document).ready(function () {
+        var router = new app.Router(); 
+    });
+
+    return app;
+
+})($);

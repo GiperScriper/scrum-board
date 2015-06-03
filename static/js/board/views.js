@@ -5,6 +5,7 @@
         
         initialize: function () {
             this.template = _.template($(this.templateName).html());
+            console.log('init view');
         },
         
         render: function () {

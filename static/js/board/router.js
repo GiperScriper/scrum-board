@@ -2,7 +2,7 @@
 
 	var Router = Backbone.Router.extend({
 		routes: {
-			'': 'home'
+			'': 'index'
 		},
 
 		initialize: function (options) {
@@ -11,12 +11,12 @@
 			Backbone.history.start();
 		},
 
-		home: function () {
-			var view = new App.Views.Index({el: this.contentElement});
+		index: function () {
+			var view = new App.Views.Index({el: this.contentElement});			
 			this.render(view);
 		},
 
-		render: function () {
+		render: function (view) {
 			if (this.current) {
 				this.current.$el = $();
 				this.current.remove();

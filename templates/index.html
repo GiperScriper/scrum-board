@@ -4,14 +4,20 @@
 <head>
     <title>Board</title>
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendor/bootswatch/cosmo/bootstrap.min.css' %}">    
+    <link rel="stylesheet" href="{% static 'vendor/bootswatch/cosmo/bootstrap.min.css' %}">
+
+    <script type="text/template" id="index-template">
+        <h1>Welcome to Scrum Board!</h1>
+    </script>    
 </head>
 <body>
-    <h1>Board</h1>
+    <h1>Board: Root Page</h1>
     <hr>
     <a href="/demo">demo</a>
     
     <div id="content"></div>
+
+
 
     <!-- Vendors -->
     <script src="{% static 'vendor/jquery/dist/jquery.js' %}"></script>

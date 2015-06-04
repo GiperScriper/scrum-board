@@ -1,19 +1,22 @@
 (function () {
     "use strict";
 
-    angular.module('app.home').controller('homeController', function ($scope) {
+    angular.module('app.home').controller('HomeController', ['$scope', 'SprintResource', function ($scope, SprintResource) {
 
-        $scope.messages = {};
-        $scope.messages.greeting = 'ky-ky';        
-        
-        console.log($scope.messages.greeting);        
+        $scope.sprints = [];            
 
         $scope.showMessage = function () {
             $scope.test = 'showing message';
             console.log('showing message');
         }
 
-    });
+        SprintResource.get().$promise.then(function (response) {
+            $scope.sprints = response.results;
+            console.log(response.results);
+        });
 
+        console.log('home controller');
+
+    }]);
 
 })();

@@ -19,11 +19,12 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "backbone": "~1.2.0",
     "bootstrap": "~3.3.4",
     "bootswatch": "~3.3.4+1",
     "angular": "~1.4.0",
     "angular-resource": "~1.4.0",
-    "angular-route": "~1.4.0"
+    "angular-route": "~1.4.0",
+    "zepto": "~1.1.6",
+    "angular-ui": "~0.4.0"
   }
 }

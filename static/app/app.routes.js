@@ -1,12 +1,15 @@
 (function () {
 	"use strict";
 
-	angular.module('app.routes', ['ngRoute']).config(['$routeProvider', 
-		function ($routeProvider) {
+	angular.module('app.routes', ['ngRoute', 'ngResource']).config(['$routeProvider', '$resourceProvider',
+		function ($routeProvider, $resourceProvider) {
+			
+			// disabled to strip trailing slashes
+			$resourceProvider.defaults.stripTrailingSlashes = false;
 			
 			$routeProvider.
 	        
-			when('/', {
+			when('/home', {
 	            templateUrl: '/static/app/components/home/home.view.html',
 	            controller: 'HomeController'            
 	        }).

@@ -5,7 +5,7 @@
         
         function ($resource) {
             return $resource(
-                '/api/v1/sprints/:id', {}, {               
+                '/api/v1/sprints/:id/', {}, {               
                     get: {
                         method: 'GET',                        
                     }
@@ -13,5 +13,5 @@
             );
         }
     ]);
-    console.log('api is loaded');
+   
 })();

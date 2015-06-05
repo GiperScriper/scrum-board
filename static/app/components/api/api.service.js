@@ -13,5 +13,5 @@
             );
         }
     ]);
-    console.log('api is loaded');
+   
 })();

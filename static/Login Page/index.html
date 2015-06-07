@@ -6,29 +6,52 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 	<div class="container">
 
   <div id="login-form">
 
-    <h3>Scrum Login</h3>
+    <h3>Scrum Board</h3>
 
     <fieldset>
 
       <form action="javascript:void(0);" method="get">
 
-        <input type="email"> 
+        <input type="email" placeholder="login"> 
 
-        <input type="password"> 
+        <input type="password" placeholder="password"> 
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Sign In">
 
+        </div> <!-- end login-form -->
 
       </form>
 
     </fieldset>
+  <div class="registation-form">
+     <p>
+        Don't have an account? <a href="#registration" class="register-button">Create one.</a>
+    </p>
+  </div>
+    </div>
 
-  </div> <!-- end login-form -->
+        <div class="modal" id="registration">
+          <div class="modal-container">
+            
+            <h1>Registration</h1>
 
-</div>
+            <form action="javascript:void(0);" method="get">
+              
+              <input type="login" placeholder="Username"><br>
+              <input type="email" placeholder="E-mail Address"><br>
+              <input type="password" placeholder="Password"><br>
+              <input type="password" placeholder="Confirm Password"><br>
+          
+            </form>
+            <a href="#" class="close"></a>
+        </div>
+
+        </div>
+    </div>
 </body>
 </html>

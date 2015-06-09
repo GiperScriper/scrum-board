@@ -12,6 +12,9 @@
         // views
         'app.home',
         'app.about',
+
+        // third party modules
+        'ui.bootstrap'
     ]);
 
 })();

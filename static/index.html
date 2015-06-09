@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>   
-
     
     {% verbatim %}   
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -25,11 +24,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#home">Scrum Board</a>
+          <a class="navbar-brand" href="#/">Scrum Board</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#/">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -41,9 +40,6 @@
       <ng-view>load by server</ng-view>        
     </div><!-- /.container -->
     {% endverbatim %}    
-    
-
-
 
 
     <!-- Vendors:js -->
@@ -72,7 +68,6 @@
     <!-- About -->
     <script src="{% static 'app/components/about/about.module.js' %}"></script>    
     <script src="{% static 'app/components/about/about.controller.js' %}"></script>
-         
  
 </body>
 </html>

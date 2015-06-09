@@ -9,7 +9,7 @@
 			
 			$routeProvider.
 	        
-			when('/home', {
+			when('/', {
 	            templateUrl: '/static/app/components/home/home.view.html',
 	            controller: 'HomeController'            
 	        }).

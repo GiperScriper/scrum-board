@@ -72,7 +72,6 @@ class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
 	search_fields = (User.USERNAME_FIELD,)
 
 
-
 def index(request):
 	sprint = Sprint.objects.get(pk=1)	
 	tasks = sprint.task_set.all()
@@ -80,7 +79,7 @@ def index(request):
 	return render(request, 'index.html', locals())
 
 def demo(request):
-	return render(request, 'demo/index.html', locals())
+	return HttpResponse("<h1>Redirect</h1>")
 
 def main(request):
 	return render(request, 'demo/main.html', locals())

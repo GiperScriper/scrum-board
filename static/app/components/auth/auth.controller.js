@@ -6,7 +6,7 @@
         $scope.testClick = function (user) {
             console.log(user);
             
-            AuthService.getToken({
+            AuthService.login({
                 "username": user.email, 
                 "password": user.password,
             

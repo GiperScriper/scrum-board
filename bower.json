@@ -25,6 +25,7 @@
     "angular-resource": "~1.4.0",
     "angular-route": "~1.4.0",
     "zepto": "~1.1.6",
-    "angular-ui": "~0.4.0"
+    "angular-ui": "~0.4.0",
+    "angular-bootstrap": "~0.13.0"
   }
 }

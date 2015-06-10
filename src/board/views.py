@@ -22,12 +22,13 @@ class DefaultsMixin(object):
 
 	authentication_classes = (
 		authentication.BasicAuthentication,
+		authentication.SessionAuthentication,
 		authentication.TokenAuthentication,
 	)
 
-	# permission_classes = (
-	# 	permissions.IsAuthenticated,
-	# )
+	permission_classes = (
+		permissions.IsAuthenticated,
+	)
 
 	paginate_by = 15
 	paginate_by_param = 'page_size'
@@ -51,7 +52,7 @@ class SprintViewSet(DefaultsMixin, viewsets.ModelViewSet):
 
 
 class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
-	"""	API endpoint for listing nad creating tasks. """
+	"""	API endpoint for listing and creating tasks. """
 
 	queryset = Task.objects.all()
 	serializer_class = TaskSerializer
@@ -72,7 +73,6 @@ class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
 	search_fields = (User.USERNAME_FIELD,)
 
 
-
 def index(request):
 	sprint = Sprint.objects.get(pk=1)	
 	tasks = sprint.task_set.all()
@@ -80,7 +80,7 @@ def index(request):
 	return render(request, 'index.html', locals())
 
 def demo(request):
-	return render(request, 'demo/index.html', locals())
+	return HttpResponse("<h1>Redirect</h1>")
 
 def main(request):
 	return render(request, 'demo/main.html', locals())

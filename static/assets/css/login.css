@@ -62,12 +62,11 @@ input::-moz-placeholder {
 }
 
 .container {
-  left: 50%;
-  position: fixed;
-  top: 35%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
 }
 
 #login-form {
@@ -75,7 +74,7 @@ input::-moz-placeholder {
 }
 
 #login-form h3 {
-  background-color: #0E79FE;
+  background-color: #6F7E97;
   border-radius: 5px 5px 0 0;
   color: #fff;
   font-size: 14px;
@@ -110,13 +109,15 @@ input::-moz-placeholder {
 }
 
 #login-form input[type="email"],
-#login-form input[type="password"] {
+#login-form input[type="password"],
+#login-form input[type="text"] {
   border: 1px solid #ccc;
   padding: 12px 10px;
   width: 100%;
 }
 
-#login-form input[type="email"] {
+#login-form input[type="email"],
+#login-form input[type="text"] {
   margin-bottom: 5px;
 }
 
@@ -125,7 +126,7 @@ input::-moz-placeholder {
 }
 
 #login-form input[type="submit"] {
-  background: #0E79FE;
+  background: #6F7E97;
   position: relative;
   left: 85px;
   color: #fff;
@@ -135,7 +136,7 @@ input::-moz-placeholder {
 }
 
 #login-form input[type="submit"]:hover {
-  background: #1055DA;
+  box-shadow: -1px -1px 10px 1px #667290;
 }
 
 #login-form footer {
@@ -220,6 +221,19 @@ input::-moz-placeholder {
   width: 70%;
 }
 
+.modal-container input[type="submit"] {
+  position: relative;
+  left: 22%;
+  width: 50%;
+  padding: 12px 10px;
+  background: #6F7E97;
+  color: #fff;
+
+}
+
+.modal-container input[type="submit"]:hover {
+  box-shadow: -1px 1px 15px 2px #667290;
+}
 
 .close {
     color: #B9B9B9;

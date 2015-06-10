@@ -5,15 +5,17 @@
 
         $scope.testClick = function (user) {
             
-            var user_data = {
+            var user_data = {           
                 "username": user.email, 
-                "password": user.password            
-            }
+                "password": user.password 
+            }         
+            
 
             console.log(user_data);
            
             AuthService.login(user_data).$promise.then(function (response) {
-                console.log(response.token);
+                //console.log(response.token);
+                window.location.href = '/';
             });
         }
 

@@ -1,12 +1,11 @@
 (function () {
     "use strict";
 
-    angular.module('app', [
-        
-        // routes 
-        'app.routes',
+    angular.module('app', [ 
 
-        // api
+        // general
+        'app.routes',
+        'app.config',        
         'app.api',
 
         // views

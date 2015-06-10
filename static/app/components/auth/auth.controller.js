@@ -4,14 +4,16 @@
     angular.module('app.auth').controller('AuthController', ['$scope', 'AuthService', function ($scope, AuthService) {
 
         $scope.testClick = function (user) {
-            console.log(user);
             
-            AuthService.getToken({
+            var user_data = {
                 "username": user.email, 
-                "password": user.password,
-            
-            }).$promise.then(function (response) {
-                console.log(response);
+                "password": user.password            
+            }
+
+            console.log(user_data);
+           
+            AuthService.login(user_data).$promise.then(function (response) {
+                console.log(response.token);
             });
         }
 

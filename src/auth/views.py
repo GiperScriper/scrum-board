@@ -11,7 +11,7 @@ import json
 
 @csrf_exempt
 def auth_login(request):
-	user_data = json.loads(request.body)
+	user_data = json.loads(str(request.body, 'utf-8'))
 	
 	username = user_data.get('username', None)
 	password = user_data.get('password', None)

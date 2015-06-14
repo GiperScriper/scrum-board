@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('app.auth').controller('AuthController', ['$scope', 'AuthService', function ($scope, AuthService) {
+    angular.module('app.auth').controller('AuthController', ['$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
 
         $scope.testClick = function (user) {
             
@@ -14,8 +14,9 @@
             console.log(user_data);
            
             AuthService.login(user_data).$promise.then(function (response) {
-                //console.log(response.token);
-                window.location.href = '/';
+                // redirect to main page
+                $location.path('/home');
+                console.log(response.token);
             });
         }
 

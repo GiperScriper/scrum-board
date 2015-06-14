@@ -5,7 +5,7 @@
         
         function ($resource) {
             return $resource(
-                '/api/v1/auth/login/', {}, {
+                '/api/v1/auth/token/', {}, {               
                     login: {
                         method: 'POST',                        
                     }

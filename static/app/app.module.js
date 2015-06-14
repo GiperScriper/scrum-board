@@ -7,6 +7,7 @@
         'app.routes',
         'app.config',        
         'app.api',
+        'app.auth',
 
         // views
         'app.home',
